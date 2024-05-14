@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.site-header {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.site-header .wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.site-header .site-title {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.page-content {
+    padding: 2rem 0;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.home {
+    text-align: center;
+}
+
+.home h1 {
+    color: #6a1b9a;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.home p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.media {
+    margin-bottom: 2rem;
+}
+
+.developers, .controls, .inventory {
+    margin-bottom: 2rem;
+}
+
+.developers ul, .controls ul, .inventory ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.developers li, .controls li, .inventory li {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.developers h3, .controls h2, .inventory h2 {
+    color: #6a1b9a;
+    margin-bottom: 1rem;
+}

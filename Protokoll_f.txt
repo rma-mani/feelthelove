@@ -1,0 +1,96 @@
+TODO Updated this protocoll further for Meilenstein 3;
+
+Das "LOVE" Protokoll
+
+Im folgenden Text wird unser Netzwerkprotokoll und seine Befehle erläutert.,
+
+Das Protokoll hat die folgende Struktur:
+	/[BEFEHL] [PARAMETER] (ohne [])
+
+Wichtig ist, den Lehrschlag nach /[BEFEHL] nicht zu vergessen.
+
+
+Die folgenden Befehle sind derzeit implementiert:
+
+"CKNM": Zeigt den Namen des Spielers
+Chat Command: /checkname
+Beispiel: redundant.
+
+"NICK": Ändert den Namen des Spielers. Nach dem Befehl muss man den Namen eingeben, den man sich wünscht
+Chat Command: /changename [name]
+Beispiel: /changename Max
+
+"PONG": Pingt den Sever im Hintergrund, schickt nichts zurück 
+Chat Command: /pong
+Beispiel: redundant.
+
+"SIZE": Zeigt die Anzahl der verbundenen Clients
+Chat Command: /size
+Beispiel: redundant.
+
+"LIST": Zeigt Namen der Spieler, die sich zurzeit in der Lobby befinden
+Chat Command: /list
+Beispiel: redundant.
+
+"QUIT": Beendet die Verbindung zum Server
+Chat Command: /quit
+Beispiel: redundant.
+
+"WHOELSE": Zeigt, wer noch zur Lobby verbunden ist
+Chat Command: /whoelseishere
+
+"STRGM": Startet das Spiel in einer Lobby, wenn mindestens ein Spieler damit verbunden ist
+Chat Command: /startgame [ClientID]
+Beispiel: /startgame 15328479159
+
+"CRTLO": Erstellt eine neue Lobby
+Chat Command: /createLobby [NameLobby],[ClientID]
+Beispiel: /createLobby TestLobby,15328479159
+
+"JOINLO": Tritt einer Lobby bei
+Chat Command: /joinlobby [NameLobby],[ClientID]
+Beispiel: /joinlobby TestLobby,15328479159
+
+"BCM": Broadcastet die Nachricht an alle anderen Clients
+Chat Command: /broadcastMessage [ClientID],[Nachricht]
+Beispiel: /broadcastMessage 15328479159,Hello World!
+
+"LACIL": Listet alle clients in den Lobbies auf
+Chat Command: /listAllClientsInLobbies
+Beispiel: redundant.
+
+"MOVE": Bewegt einen Charakter zu den übergebenen Koordinaten
+Chat Command: /move [KoordinateX],[KoordinateY],[ClientID]
+Beispiel: /move 5,5,15328479159
+
+"ADCHR": Fügt einen neuen Character hinzu
+Chat Command: /addCharacter [ClientID]
+Beispiel: /addCharacter 15328479159
+
+"MSGLO": Schickt eine Nachricht im Chat einer Lobby
+Chat Command: /lobbyChatMessage [ClientID],[message]
+Beispiel: /lobbyChatMessage 15328479159,Hello World!
+
+"WHISPER": Ermöglicht eine direkte Kommunikation vom Spieler zu spieler per Chat
+Chat Command: /initiateWhisperChat [ClienttID],[ZielClienttID],[ClientName]
+Beispiel: /initiateWhisperChat 15328479159,35448479159,Mara
+
+"CPOS": Schickt die aktuellen Koordinate des Charakters an den Client
+Chat Command: /currentPosition [ClientID],[KoordinateX],[KoordinateY]
+Beispiel: /currentPosition 15328479159,5,5
+
+"WHIPME": Einem Spieler direkt schreiben
+Chat Command: /WhisperMessage [ClientID],[ZielClientID],[Nachricht]
+Beispiel: /WhisperMessage 15328479159,35448479159,Hello World!
+
+"EXTLO": Handhabt das Verlassen einer Lobby durch einen Client
+Chat Command: /exitLobby [ClientID],[Username]
+Beispiel: /exitLobby 15328479159,Max
+
+"COLD": Handhabt die Kollision von zwei Clients während einem Spiel.
+Chat Command: /cold [FirstClientID],[SecondClientID]
+Beispiel: /cold 15328479159,35448479159
+
+Falls die Eingabe dem oben beschriebenen Syntax nicht entspricht, wird der Command als Broadcast über das BroadcastPane zurückgegeben.
+
+
